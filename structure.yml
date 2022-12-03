@@ -1,0 +1,41 @@
+# This file will be used to describe the basic file structure of the bot
+
+entry_point: main.py # The file that will be executed when the bot starts
+
+# SRC will be the folder for holding all components of the bot
+src:
+  - client.py # This will be the file that will hold the client
+  - command.py # This will be the file for the command class
+  - helper.py # Will be responsible for all the helper methods
+
+# The folder for holding all the commands
+commands:
+  - general:
+    - ping.py # The ping command
+  
+  - utility:
+    - help.py # The help command
+
+  - moderation:
+    - ban.py # The ban command
+    - kick.py # The kick command
+
+  - economy:
+    - profile.py # The balance command
+    - daily.py # The daily command
+
+# The folder for holding 
+events:
+  - on_ready.py # The on_ready event
+  - on_message.py # The on_message event
+
+# The folder for holding all the modules
+modules:
+  - database.py # The database module
+  - config.py # The config module
+
+# The folder for holding all the errors
+errors:
+  - command_error.py # The command error handler
+  - event_error.py # The event error handler
+  
